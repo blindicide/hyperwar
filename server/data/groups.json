@@ -1,0 +1,17 @@
+{
+  "1000000001": {
+    "name": "Soviet Motor Rifle Company",
+    "units": [
+      { "type": "2000000010", "count": 1 },
+      { "type": "1000000002", "count": 3 },
+      { "type": "2000000011", "count": 4 }
+    ]
+  },
+  "1000000002": {
+    "name": "Rifle Platoon",
+    "units": [
+      { "type": "2000000013", "count": 3 },
+      { "type": "2000000012", "count": 1 }
+    ]
+  }
+}

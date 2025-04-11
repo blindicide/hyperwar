@@ -1,0 +1,23 @@
+{
+  "name": "All New Units Battle",
+  "description": "A showcase battle featuring all newly added NATO and Warsaw Pact units.",
+  "factions": ["NATO", "WarsawPact"],
+  "map": {
+    "cols": 30,
+    "rows": 20
+  },
+  "units": [
+    { "typeId": "1744275000201", "faction": "NATO", "col": 4, "row": 18 },
+    { "typeId": "1744275000202", "faction": "NATO", "col": 6, "row": 18 },
+    { "typeId": "1744275000203", "faction": "NATO", "col": 8, "row": 18 },
+    { "typeId": "1744275000204", "faction": "NATO", "col": 10, "row": 18 },
+    { "typeId": "1744275000205", "faction": "NATO", "col": 12, "row": 18 },
+
+    { "typeId": "1744275000206", "faction": "WarsawPact", "col": 25, "row": 2 },
+    { "typeId": "1744275000207", "faction": "WarsawPact", "col": 23, "row": 2 },
+    { "typeId": "1744275000208", "faction": "WarsawPact", "col": 21, "row": 2 },
+    { "typeId": "1744275000209", "faction": "WarsawPact", "col": 19, "row": 2 },
+    { "typeId": "1744275000210", "faction": "WarsawPact", "col": 17, "row": 2 },
+    { "typeId": "1744275000211", "faction": "WarsawPact", "col": 15, "row": 2 }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "NATO": {
+    "name": "NATO",
+    "countries": [
+      "USA",
+      "UK",
+      "France",
+      "FRG",
+      "Canada"
+    ]
+  },
+  "WarsawPact": {
+    "name": "Warsaw Pact",
+    "countries": [
+      "USSR",
+      "GDR",
+      "Poland",
+      "Czechoslovakia"
+    ]
+  },
+  "1744325463194": {
+    "name": "ACCORD",
+    "countries": [
+      "Equestria",
+      "GRFS",
+      "Hell",
+      "ENLC"
+    ]
+  },
+  "1744325733314": {
+    "name": "INTERDEF",
+    "countries": [
+      "USA (2020s)",
+      "Russia",
+      "Germany",
+      "France (2020s)",
+      "UK (2020s)",
+      "SCP Foundation",
+      "GOC",
+      "RSR",
+      "Almeria"
+    ]
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "us_rifle_squad": {
+    "name": "US Rifle Squad",
+    "faction": "NATO",
+    "unitClass": "RifleSquad",
+    "maxHealth": 10,
+    "movementSpeed": 3,
+    "display": { "char": "R", "color": "#4a90e2", "bgColor": "rgba(74, 144, 226, 0.2)" },
+    "loadout": [
+      { "weaponId": "m16", "maxCount": 8, "priority": 3, "ammo": { "5.56mm": 240 } },
+      { "weaponId": "m60", "maxCount": 1, "priority": 2, "ammo": { "7.62mm": 500 } },
+      { "weaponId": "at4_launcher", "maxCount": 1, "priority": 1, "ammo": { "at4_heat": 3, "at4_he": 2 }, "preferredAmmo": "at4_he" }
+    ]
+  },
+  "us_m60_tank": {
+    "name": "M60 Tank",
+    "faction": "NATO",
+    "unitClass": "Tank",
+    "maxHealth": 50,
+    "movementSpeed": 4,
+    "display": { "char": "T", "color": "#34a853", "bgColor": "rgba(52, 168, 83, 0.2)" },
+    "loadout": [
+      { "weaponId": "m68_gun", "maxCount": 1, "priority": 1, "ammo": { "105mm_heat": 10, "105mm_he": 15 }, "preferredAmmo": "105mm_heat" },
+      { "weaponId": "m60", "maxCount": 1, "priority": 2, "ammo": { "7.62mm": 1000 } }
+    ]
+  },
+  "sov_rifle_squad": {
+    "name": "Soviet Rifle Squad",
+    "faction": "WarsawPact",
+    "unitClass": "RifleSquad",
+    "maxHealth": 10,
+    "movementSpeed": 3,
+    "display": { "char": "R", "color": "#d0021b", "bgColor": "rgba(208, 2, 27, 0.2)" },
+    "loadout": [
+      { "weaponId": "akm", "maxCount": 9, "priority": 3, "ammo": { "7.62mm": 270 } },
+      { "weaponId": "at4_launcher", "maxCount": 1, "priority": 1, "ammo": { "at4_heat": 2, "at4_he": 1 }, "preferredAmmo": "at4_he" }
+    ]
+  },
+  "sov_t62_tank": {
+    "name": "T-62 Tank",
+    "faction": "WarsawPact",
+    "unitClass": "Tank",
+    "maxHealth": 45,
+    "movementSpeed": 5,
+    "display": { "char": "T", "color": "#f5a623", "bgColor": "rgba(245, 166, 35, 0.2)" },
+    "loadout": [
+      { "weaponId": "u5ts_gun", "maxCount": 1, "priority": 1, "ammo": { "115mm_apfsds": 12, "115mm_he": 18 }, "preferredAmmo": "115mm_apfsds" },
+      { "weaponId": "m60", "maxCount": 1, "priority": 2, "ammo": { "7.62mm": 800 } }
+    ]
+  }
+}

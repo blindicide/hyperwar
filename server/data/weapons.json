@@ -1,0 +1,139 @@
+{
+  "1744275000101": {
+    "name": "120mm L/44 Gun",
+    "category": "Tank Gun",
+    "compatibleAmmo": [
+      "1744275000001",
+      "1744275000002"
+    ],
+    "baseAccuracy": 0.75,
+    "maxDistance": 8,
+    "fireRate": 1
+  },
+  "1744275000102": {
+    "name": "125mm 2A46 Gun",
+    "category": "Tank Gun",
+    "compatibleAmmo": [
+      "1744275000003",
+      "1744275000004"
+    ],
+    "baseAccuracy": 0.7,
+    "maxDistance": 8,
+    "fireRate": 1
+  },
+  "1744275000103": {
+    "name": "M242 Bushmaster",
+    "compatibleAmmo": [
+      "1744275000005"
+    ],
+    "baseAccuracy": 0.4,
+    "maxDistance": 5,
+    "fireRate": 3
+  },
+  "1744275000104": {
+    "name": "TOW ATGM",
+    "category": "ATGM",
+    "compatibleAmmo": [
+      "1744275000006"
+    ],
+    "baseAccuracy": 0.7,
+    "maxDistance": 7,
+    "fireRate": 1
+  },
+  "1744275000105": {
+    "name": "2A42",
+    "compatibleAmmo": [
+      "1744275000007"
+    ],
+    "baseAccuracy": 0.4,
+    "maxDistance": 5,
+    "fireRate": 3
+  },
+  "1744275000106": {
+    "name": "Konkurs ATGM",
+    "category": "ATGM",
+    "compatibleAmmo": [
+      "1744275000008"
+    ],
+    "baseAccuracy": 0.7,
+    "maxDistance": 7,
+    "fireRate": 1
+  },
+  "1744275000107": {
+    "name": "155mm Howitzer",
+    "category": "Artillery",
+    "compatibleAmmo": [
+      "1744275000009"
+    ],
+    "baseAccuracy": 0.5,
+    "maxDistance": 10,
+    "fireRate": 1
+  },
+  "1744275000108": {
+    "name": "122mm Howitzer",
+    "category": "Artillery",
+    "compatibleAmmo": [
+      "1744275000010"
+    ],
+    "baseAccuracy": 0.5,
+    "maxDistance": 9,
+    "fireRate": 1
+  },
+  "1744275000109": {
+    "name": "M1919",
+    "compatibleAmmo": [
+      "1744275000011"
+    ],
+    "baseAccuracy": 0.4,
+    "maxDistance": 6,
+    "fireRate": 3
+  },
+  "1744275000110": {
+    "name": "M2HB",
+    "compatibleAmmo": [
+      "1744275000012"
+    ],
+    "baseAccuracy": 0.4,
+    "maxDistance": 3,
+    "fireRate": 4
+  },
+  "1744275000111": {
+    "name": "KPVT",
+    "compatibleAmmo": [
+      "1744275000013"
+    ],
+    "baseAccuracy": 0.4,
+    "maxDistance": 3,
+    "fireRate": 6
+  },
+  "2000000001": {
+    "name": "AK-74",
+    "category": "Assault Rifle",
+    "compatibleAmmo": [
+      "2000000001"
+    ],
+    "baseAccuracy": 0.5,
+    "maxDistance": 4,
+    "fireRate": 3
+  },
+  "2000000002": {
+    "name": "PKM",
+    "category": "LMG",
+    "compatibleAmmo": [
+      "2000000002"
+    ],
+    "baseAccuracy": 0.45,
+    "maxDistance": 5,
+    "fireRate": 4
+  },
+  "2000000003": {
+    "name": "NSV",
+    "category": "HMG",
+    "compatibleAmmo": [
+      "2000000003"
+    ],
+    "baseAccuracy": 0.4,
+    "maxDistance": 6,
+    "fireRate": 5
+  }
+}

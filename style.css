@@ -1,0 +1,125 @@
+/* Keep existing body styles */
+body {
+    margin: 0;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    /* Removed align-items: center; to allow main-container to stretch */
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    font-family: sans-serif;
+    color: #333;
+    box-sizing: border-box;
+}
+
+h1 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #000;
+    text-align: center; /* Center title */
+}
+
+/* New main container using Flexbox */
+.main-container {
+    display: flex;
+    flex-direction: row; /* Arrange items side-by-side */
+    justify-content: center; /* Center items horizontally */
+    gap: 20px; /* Space between game area and info panel */
+    width: 100%; /* Take full width */
+    max-width: 1400px; /* Optional: Limit overall width */
+    margin: 0 auto; /* Center the main container itself */
+    align-items: flex-start; /* Align items to the top */
+}
+
+.game-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center controls and canvas */
+}
+
+/* Keep existing controls styles */
+.controls {
+    margin-bottom: 15px;
+    background-color: #e0e0e0;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.controls label { font-weight: bold; }
+.controls input[type="number"] { width: 60px; padding: 5px; border: 1px solid #aaa; border-radius: 3px; }
+.controls button { padding: 6px 12px; border: none; background-color: #3498db; color: white; border-radius: 3px; cursor: pointer; font-size: 1em; }
+.controls button:hover { background-color: #2980b9; }
+
+/* Keep existing canvas container styles, adjust width maybe */
+#canvasContainer {
+    /* Adjust width/max-width as needed based on desired info panel width */
+    width: 70vw; /* Example: Use viewport width units */
+    max-width: 1000px;
+    height: 75vh;
+    max-height: 600px;
+    overflow: auto;
+    border: 1px solid #aaa;
+    margin: 0; /* Remove auto margin if centered by parent */
+    background-color: #ffffff;
+    position: relative; /* Should not affect basic rendering */
+}
+
+/* Keep existing canvas style */
+#gameCanvas { /* Corrected selector from #canvasCanvas */
+     display: block;
+     border: none;
+     /* background-color is set by container or JS clear */
+ }
+
+/* New Info Panel Styles */
+#infoPanel {
+    width: 250px; /* Fixed width for the panel */
+    min-width: 200px; /* Prevent it getting too small */
+    background-color: #e9ecef; /* Light background */
+    border: 1px solid #ced4da; /* Subtle border */
+    border-radius: 5px;
+    padding: 15px;
+    box-sizing: border-box; /* Include padding in width */
+}
+
+#infoPanel h2, #infoPanel h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+}
+
+#infoPanel p {
+    margin: 5px 0;
+    font-size: 0.9em;
+    line-height: 1.4;
+}
+
+#infoPanel strong {
+    display: inline-block; /* Allows setting width */
+    min-width: 80px; /* Align values slightly */
+    color: #555;
+}
+
+#infoPanel hr {
+    border: 0;
+    height: 1px;
+    background-color: #ccc;
+    margin: 15px 0;
+}
+
+#infoPanel .info-content {
+    /* Initially hidden, shown when a unit is selected */
+    display: none;
+}
+
+#infoPanel .no-selection {
+    /* Initially shown, hidden when a unit is selected */
+    display: block;
+    color: #6c757d; /* Grey text */
+    text-align: center;
+    margin-top: 20px;
+}

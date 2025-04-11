@@ -1,0 +1,231 @@
+<html>
+  <head>
+  </head>
+  <body>
+
+    <div>
+      <button type="button" onclick="light(1)">Minimise</button>
+      <button type="button" onclick="light(0)">Maximise</button>
+    </div>
+    <div>
+      <input id="idtext" type="text"  oninput="getText()">
+    </div>
+
+    <svg version="1.1" width="800" height="600" viewBox="0 0 800 600" baseProfile="full" xmlns="http://www.w3.org/2000/svg">
+
+      <!-- NATO Joint Military Symbology https://fr.wikipedia.org/wiki/APP-6A -->
+      
+      <!-- Rectangle Général -->
+      <!-- Vert : Par défaut pour l'infanterie classique -->
+      <!-- Bleu : Infanterie de Marine -->
+      <!-- Rouge : Légion -->
+      <!-- Jaune orangé : Cavalerie -->
+      <!-- Jaune : Artillerie -->
+      <rect id="rectgen" x="50" y="50" height="300" width="600" fill="green" stroke-width="2" stroke="white"/>
+      
+
+      <!-- Blindés -->
+      <ellipse id="iDBlinde" cx="350" cy="200" rx="220" ry="80" stroke-width="2" stroke="white" fill="pink" fill-opacity="0.9" />
+
+      <!-- Blindés Roues -->
+      <g id="iDRoue">
+        <circle cx="250" cy="310" r="15" stroke-width="2" stroke="black" fill-opacity="0.1" />
+        <circle cx="350" cy="310" r="15" stroke-width="2" stroke="black" fill-opacity="0.1" />
+        <circle cx="450" cy="310" r="15" stroke-width="2" stroke="black" fill-opacity="0.1" />
+      </g>
+
+      <!-- Forces Spéciales -->
+      <text id="sf" x="150" y="125" font-size="60" text-anchor="middle" fill="white">SF</text>
+
+      <!-- Infanterie -->
+      <g id="iDInfanterie">
+        <line id="infanterie1" x1="50" y1="350" x2="650" y2="50" stroke-width="2" stroke="white"/>
+        <line id="infanterie2" x1="50" y1="50" x2="650" y2="350" stroke-width="2" stroke="white"/>
+      </g>
+
+      <!-- Artillerie -->
+      <circle id="iDArtillerie" cx="350" cy="200" r="20" fill="black" />
+
+      <!-- Régiment -->
+      <g id="iDRegiment">
+        <line id="regiment_a" x1="250" y1="0" x2="250" y2="40" stroke-width="2" stroke="black"/>
+        <line id="regiment_b" x1="350" y1="0" x2="350" y2="40" stroke-width="2" stroke="black"/>
+        <line id="regiment_c" x1="450" y1="0" x2="450" y2="40" stroke-width="2" stroke="black"/>
+      </g>
+
+      <!-- Matériel -->
+      <g id="iDMateriel">
+        <path id="path3800" d="m 76.74653,140.80823 c 32.69071,0 59.19176,26.50106 59.19176,59.19177 0,32.6907 -26.50105,59.19176 -59.19176,59.19176" 
+              style="fill:none;stroke:#000000;stroke-width:10;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4"/>
+        <path id="path3012" d="M 137.82133,200 H 462.17867" 
+              style="fill:none;stroke:#000000;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4"/>
+        <path id="path3800-1" d="m 523.25347,140.80823 c -32.69071,0 -59.19176,26.50106 -59.19176,59.19177 0,32.69071 26.50105,59.19176 59.19176,59.19176"
+              style="fill:none;stroke:#000000;stroke-width:10;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4"/>
+      </g>
+
+      <!-- Parachutiste -->
+      <g id="iDParachutiste">
+        <path style="fill:none;stroke:#000000;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" 
+              id="ABN" d="m 184.38444,356.7218 c 0,0 34.41086,-31.99987 68.95575,-30.86118 39.3232,1.29621 46.49508,40.79953 46.49508,40.79953 0,0 6.23863,-39.4259 46.49509,-40.79953 40.25646,-1.37362 68.95575,30.86118 68.95575,30.86118"/>
+      </g>
+    </svg>
+    
+    
+    <script>
+      var rectgen_att = {x: 150, y: 50, height: 300, width: 600};
+      var artillerie_att = {};
+      var infanterie_att = {};
+      var blinde_att = {};
+      var regiment_att = {};
+
+      var catalogue = [
+        {
+          keywords: ['infanterie', 'infantry'],
+          idhtml: 'iDInfanterie',
+          color: 'green'
+        },
+        {
+          keywords: ['blindé', 'cavalerie'],
+          idhtml: 'iDBlinde',
+          color: 'yellow'
+        },
+        {
+          keywords: ['roue', 'wheeled'],
+          idhtml: 'iDRoue'
+        },
+        {
+          keywords: ['régiment'],
+          idhtml: 'iDRegiment'
+        },
+        {
+          keywords: ['matos'],
+          idhtml: 'iDMateriel'
+        },
+        {
+          keywords: ['para'],
+          idhtml: 'iDParachutiste'
+        },
+        {
+          keywords: ['marine'],
+          color: 'blue'
+        },
+        {
+          keywords: ['arti'],
+          idhtml: 'iDArtillerie'
+        }
+      ];
+
+      document.getElementById('rectgen').setAttribute("fill", "grey");
+      recalcul();
+      repositionne();
+      hidden_all();
+
+
+      function recalcul() {
+        rectgen_att.x_milieu = rectgen_att.x + rectgen_att.width  / 2;        
+        rectgen_att.y_milieu = rectgen_att.y + rectgen_att.height / 2;
+        rectgen_att.w_quart = rectgen_att.width / 4;
+        rectgen_att.h_quart = rectgen_att.height / 4;
+        artillerie_att.cx = rectgen_att.x_milieu;
+        artillerie_att.cy = rectgen_att.y_milieu;
+        blinde_att.cx = rectgen_att.x_milieu;
+        blinde_att.cy = rectgen_att.y_milieu;
+        infanterie_att.x1 = rectgen_att.x;
+        infanterie_att.x2 = rectgen_att.x + rectgen_att.width;
+        infanterie_att.y1 = rectgen_att.y;
+        infanterie_att.y2 = rectgen_att.y + rectgen_att.height;
+        regiment_att.x_a = rectgen_att.w_quart + rectgen_att.x;
+        regiment_att.x_b = rectgen_att.w_quart + regiment_att.x_a;
+        regiment_att.x_c = rectgen_att.w_quart + regiment_att.x_b;
+        regiment_att.y2 = rectgen_att.y;
+        regiment_att.y1 = regiment_att.y2 - rectgen_att.h_quart;
+        console.log(rectgen_att);
+
+      };
+
+      function repositionne() {
+        document.getElementById('rectgen').setAttribute("x", rectgen_att.x);
+        document.getElementById('rectgen').setAttribute("y", rectgen_att.y);
+        document.getElementById('rectgen').setAttribute("height", rectgen_att.height);
+        document.getElementById('rectgen').setAttribute("width", rectgen_att.width);
+        document.getElementById('iDArtillerie').setAttribute("cx", artillerie_att.cx);
+        document.getElementById('iDArtillerie').setAttribute("cy", artillerie_att.cy);
+        document.getElementById('iDBlinde').setAttribute("cx", blinde_att.cx);
+        document.getElementById('iDBlinde').setAttribute("cy", blinde_att.cy);
+
+        document.getElementById('infanterie1').setAttribute("x1", infanterie_att.x1);
+        document.getElementById('infanterie1').setAttribute("x2", infanterie_att.x2);
+        document.getElementById('infanterie1').setAttribute("y1", infanterie_att.y2);
+        document.getElementById('infanterie1').setAttribute("y2", infanterie_att.y1);
+
+        document.getElementById('infanterie2').setAttribute("x1", infanterie_att.x1);
+        document.getElementById('infanterie2').setAttribute("x2", infanterie_att.x2);
+        document.getElementById('infanterie2').setAttribute("y1", infanterie_att.y1);
+        document.getElementById('infanterie2').setAttribute("y2", infanterie_att.y2);
+
+        document.getElementById('regiment_a').setAttribute("x1", regiment_att.x_a);
+        document.getElementById('regiment_b').setAttribute("x1", regiment_att.x_b);
+        document.getElementById('regiment_c').setAttribute("x1", regiment_att.x_c);
+        document.getElementById('regiment_a').setAttribute("x2", regiment_att.x_a);
+        document.getElementById('regiment_b').setAttribute("x2", regiment_att.x_b);
+        document.getElementById('regiment_c').setAttribute("x2", regiment_att.x_c);
+
+        document.getElementById('regiment_a').setAttribute("y1", regiment_att.y1);
+        document.getElementById('regiment_b').setAttribute("y1", regiment_att.y1);
+        document.getElementById('regiment_c').setAttribute("y1", regiment_att.y1);
+        document.getElementById('regiment_a').setAttribute("y2", regiment_att.y2);
+        document.getElementById('regiment_b').setAttribute("y2", regiment_att.y2);
+        document.getElementById('regiment_c').setAttribute("y2", regiment_att.y2);
+
+      };
+
+      function light(sw) {
+        if (sw == 1) {
+          rectgen_att.x = 150;
+          rectgen_att.y = 130;
+          rectgen_att.height = 200;
+          rectgen_att.width = 400;
+          /* document.getElementById('rectgen').setAttribute("fill",`${y} ${x} 100 100`); */
+        }
+        else {
+          rectgen_att.x = 50;
+          rectgen_att.y = 50;
+          rectgen_att.height = 400;
+          rectgen_att.width = 600;
+        }
+        recalcul();
+        repositionne();
+      };
+
+      function assignVisibility(el_cat, _vis) {
+        if (typeof el_cat.idhtml != "undefined") {
+          document.getElementById(el_cat.idhtml).setAttribute("visibility", _vis);
+        };
+      };
+
+      function hidden_all() {
+        document.getElementById('rectgen').setAttribute("fill", "green");
+        catalogue.forEach(el_cat => assignVisibility(el_cat, "hidden"));
+      };
+
+      function testItems(my_word, el_cat) {
+        if (el_cat.keywords.includes(my_word)) {
+          assignVisibility(el_cat, "visible");
+          if (typeof el_cat.color != "undefined") {
+            document.getElementById('rectgen').setAttribute("fill", el_cat.color);
+          };
+        };
+      };
+
+      function testWords(my_word) {
+        catalogue.forEach(el_cat => testItems(my_word, el_cat));
+      };
+
+      function getText() {
+        hidden_all();
+        const words = document.getElementById('idtext').value.split(' ');
+        words.forEach(element => testWords(element));
+      };
+    </script>
+  </body>
+</html>

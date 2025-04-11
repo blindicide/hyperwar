@@ -1,0 +1,12 @@
+{
+  "name": "Playtest - Motor Rifle Deployment",
+  "description": "Testing deployment of a Soviet Motor Rifle Company group.",
+  "factions": ["WarsawPact", "NATO"],
+  "map": {
+    "cols": 30,
+    "rows": 20
+  },
+  "units": [
+    { "groupId": "1000000001", "faction": "WarsawPact", "col": 5, "row": 2 }
+  ]
+}

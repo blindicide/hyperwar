@@ -1,0 +1,588 @@
+{
+  "1744275000201": {
+    "name": "Leopard 2",
+    "unitClass": "Tank",
+    "faction": "NATO",
+    "country": "FRG",
+    "maxHealth": 18,
+    "movementSpeed": 6,
+    "symbol": [
+      "armor"
+    ],
+    "display": {
+      "char": "L",
+      "color": "#FFFFFF",
+      "bgColor": "rgba(0, 0, 150, 0.7)"
+    },
+    "loadout": [
+      {
+        "weaponId": "1744275000101",
+        "maxCount": 1,
+        "priority": 1,
+        "preferredAmmo": "1744275000001",
+        "ammo": {
+          "1744275000001": 12,
+          "1744275000002": 8
+        }
+      }
+    ]
+  },
+  "1744275000202": {
+    "name": "M2 Bradley",
+    "unitClass": "IFV",
+    "faction": "NATO",
+    "country": "USA",
+    "maxHealth": 10,
+    "movementSpeed": 7,
+    "capacity": true,
+    "symbol": [
+      "ifv"
+    ],
+    "display": {
+      "char": "B",
+      "color": "#FFFFFF",
+      "bgColor": "rgba(0, 0, 150, 0.7)"
+    },
+    "loadout": [
+      {
+        "weaponId": "1744275000103",
+        "maxCount": 1,
+        "priority": 1,
+        "preferredAmmo": "1744275000005",
+        "ammo": {
+          "1744275000005": 200
+        }
+      },
+      {
+        "weaponId": "1744275000104",
+        "maxCount": 1,
+        "priority": 2,
+        "preferredAmmo": "1744275000006",
+        "ammo": {
+          "1744275000006": 6
+        }
+      }
+    ]
+  },
+  "1744275000203": {
+    "name": "M109 Paladin",
+    "unitClass": "SelfPropelledGun",
+    "faction": "NATO",
+    "country": "USA",
+    "maxHealth": 8,
+    "movementSpeed": 4,
+    "symbol": [
+      "spg"
+    ],
+    "display": {
+      "char": "P",
+      "color": "#FFFFFF",
+      "bgColor": "rgba(0, 0, 150, 0.7)"
+    },
+    "loadout": [
+      {
+        "weaponId": "1744275000107",
+        "maxCount": 1,
+        "priority": 1,
+        "preferredAmmo": "1744275000009",
+        "ammo": {
+          "1744275000009": 24
+        }
+      }
+    ]
+  },
+  "1744275000204": {
+    "name": "Ferret MK2",
+    "unitClass": "ReconVehicle",
+    "faction": "NATO",
+    "country": "UK",
+    "health": 6,
+    "maxHealth": 6,
+    "movementSpeed": 9,
+    "display": {
+      "char": "F",
+      "color": "#ffffff",
+      "bgColor": "rgba(0, 0, 150, 0.7)"
+    },
+    "loadout": [
+      {
+        "weaponId": "1744275000101",
+        "maxCount": 1,
+        "priority": 3,
+        "preferredAmmo": "1744275000001",
+        "ammo": {
+          "1744275000001": 0,
+          "1744275000002": 0
+        }
+      }
+    ]
+  },
+  "1744275000205": {
+    "name": "M113",
+    "unitClass": "APC",
+    "faction": "NATO",
+    "country": "USA",
+    "maxHealth": 8,
+    "movementSpeed": 7,
+    "capacity": true,
+    "symbol": [
+      "apc"
+    ],
+    "display": {
+      "char": "M",
+      "color": "#FFFFFF",
+      "bgColor": "rgba(0, 0, 150, 0.7)"
+    },
+    "loadout": [
+      {
+        "weaponId": "1744275000110",
+        "maxCount": 1,
+        "priority": 1,
+        "preferredAmmo": "1744275000012",
+        "ammo": {
+          "1744275000012": 200
+        }
+      }
+    ]
+  },
+  "1744275000206": {
+    "name": "T-72",
+    "unitClass": "Tank",
+    "faction": "WarsawPact",
+    "country": "USSR",
+    "maxHealth": 17,
+    "movementSpeed": 6,
+    "symbol": [
+      "armor"
+    ],
+    "display": {
+      "char": "t",
+      "color": "#FFFFFF",
+      "bgColor": "rgba(150, 0, 0, 0.7)"
+    },
+    "loadout": [
+      {
+        "weaponId": "1744275000102",
+        "maxCount": 1,
+        "priority": 1,
+        "preferredAmmo": "1744275000003",
+        "ammo": {
+          "1744275000003": 12,
+          "1744275000004": 8
+        }
+      }
+    ]
+  },
+  "1744275000207": {
+    "name": "BMP-2",
+    "unitClass": "IFV",
+    "faction": "WarsawPact",
+    "country": "USSR",
+    "maxHealth": 10,
+    "movementSpeed": 7,
+    "capacity": true,
+    "symbol": [
+      "ifv"
+    ],
+    "display": {
+      "char": "b",
+      "color": "#FFFFFF",
+      "bgColor": "rgba(150, 0, 0, 0.7)"
+    },
+    "loadout": [
+      {
+        "weaponId": "1744275000105",
+        "maxCount": 1,
+        "priority": 1,
+        "preferredAmmo": "1744275000007",
+        "ammo": {
+          "1744275000007": 200
+        }
+      }
+    ]
+  },
+  "1744275000208": {
+    "name": "2S1 Gvozdika",
+    "unitClass": "SelfPropelledGun",
+    "faction": "WarsawPact",
+    "country": "USSR",
+    "maxHealth": 8,
+    "movementSpeed": 4,
+    "symbol": [
+      "spg"
+    ],
+    "display": {
+      "char": "G",
+      "color": "#FFFFFF",
+      "bgColor": "rgba(150, 0, 0, 0.7)"
+    },
+    "loadout": [
+      {
+        "weaponId": "1744275000108",
+        "maxCount": 1,
+        "priority": 1,
+        "preferredAmmo": "1744275000010",
+        "ammo": {
+          "1744275000010": 24
+        }
+      }
+    ]
+  },
+  "1744275000209": {
+    "name": "BRDM-2",
+    "unitClass": "ReconVehicle",
+    "faction": "WarsawPact",
+    "country": "USSR",
+    "maxHealth": 6,
+    "movementSpeed": 9,
+    "symbol": [
+      "recon"
+    ],
+    "display": {
+      "char": "R",
+      "color": "#FFFFFF",
+      "bgColor": "rgba(150, 0, 0, 0.7)"
+    },
+    "loadout": [
+      {
+        "weaponId": "1744275000111",
+        "maxCount": 1,
+        "priority": 1,
+        "preferredAmmo": "1744275000013",
+        "ammo": {
+          "1744275000013": 400
+        }
+      }
+    ]
+  },
+  "1744275000210": {
+    "name": "BTR-60",
+    "unitClass": "APC",
+    "faction": "WarsawPact",
+    "country": "USSR",
+    "maxHealth": 8,
+    "movementSpeed": 7,
+    "capacity": true,
+    "symbol": [
+      "apc"
+    ],
+    "display": {
+      "char": "B",
+      "color": "#FFFFFF",
+      "bgColor": "rgba(150, 0, 0, 0.7)"
+    },
+    "loadout": [
+      {
+        "weaponId": "1744275000111",
+        "maxCount": 1,
+        "priority": 1,
+        "preferredAmmo": "1744275000013",
+        "ammo": {
+          "1744275000013": 200
+        }
+      }
+    ]
+  },
+  "1744275000211": {
+    "name": "Konkurs",
+    "unitClass": "AntiTank",
+    "faction": "WarsawPact",
+    "country": "USSR",
+    "maxHealth": 6,
+    "movementSpeed": 4,
+    "symbol": [
+      "infantry"
+    ],
+    "display": {
+      "char": "K",
+      "color": "#FFFFFF",
+      "bgColor": "rgba(150, 0, 0, 0.7)"
+    },
+    "loadout": [
+      {
+        "weaponId": "1744275000106",
+        "maxCount": 1,
+        "priority": 1,
+        "preferredAmmo": "1744275000008",
+        "ammo": {
+          "1744275000008": 4
+        }
+      }
+    ]
+  },
+  "1744276000001": {
+    "name": "(101st) Aero-Troopers",
+    "unitClass": "InfantrySquad",
+    "faction": "NATO",
+    "country": "USA",
+    "health": 10,
+    "maxHealth": 10,
+    "movementSpeed": 4,
+    "symbol": [
+      "infantry"
+    ],
+    "display": {
+      "char": "A",
+      "color": "#FFFFFF",
+      "bgColor": "rgba(0, 0, 150, 0.8)"
+    },
+    "loadout": [
+      {
+        "weaponId": "1744238033154",
+        "maxCount": 9,
+        "priority": 2,
+        "preferredAmmo": "1744238020167",
+        "ammo": {
+          "1744238020167": 360
+        }
+      }
+    ]
+  },
+  "1744276000002": {
+    "name": "Paras",
+    "unitClass": "InfantrySquad",
+    "faction": "NATO",
+    "country": "UK",
+    "health": 10,
+    "maxHealth": 10,
+    "movementSpeed": 4,
+    "symbol": [
+      "infantry"
+    ],
+    "display": {
+      "char": "P",
+      "color": "#FFFFFF",
+      "bgColor": "rgba(0, 0, 150, 0.8)"
+    },
+    "loadout": [
+      {
+        "weaponId": "1744238033154",
+        "maxCount": 8,
+        "priority": 2,
+        "preferredAmmo": "1744238020167",
+        "ammo": {
+          "1744238020167": 320
+        }
+      }
+    ]
+  },
+  "1744276000003": {
+    "name": "Chasseurs-Paras",
+    "unitClass": "InfantrySquad",
+    "faction": "NATO",
+    "country": "France",
+    "health": 11,
+    "maxHealth": 11,
+    "movementSpeed": 3,
+    "symbol": [
+      "infantry"
+    ],
+    "display": {
+      "char": "F",
+      "color": "#FFFFFF",
+      "bgColor": "rgba(0, 0, 150, 0.8)"
+    },
+    "loadout": [
+      {
+        "weaponId": "1744238033154",
+        "maxCount": 10,
+        "priority": 2,
+        "preferredAmmo": "1744238020167",
+        "ammo": {
+          "1744238020167": 400
+        }
+      }
+    ]
+  },
+  "1744276000004": {
+    "name": "Morpekhi",
+    "unitClass": "InfantrySquad",
+    "faction": "WarsawPact",
+    "country": "USSR",
+    "health": 10,
+    "maxHealth": 10,
+    "movementSpeed": 4,
+    "symbol": [
+      "infantry"
+    ],
+    "display": {
+      "char": "N",
+      "color": "#FFFFFF",
+      "bgColor": "rgba(150, 0, 0, 0.8)"
+    },
+    "loadout": [
+      {
+        "weaponId": "1744239094208",
+        "maxCount": 8,
+        "priority": 2,
+        "preferredAmmo": "1744239080487",
+        "ammo": {
+          "1744239080487": 320
+        }
+      }
+    ]
+  },
+  "1744276000005": {
+    "name": "Mot.-Schutzen",
+    "unitClass": "InfantrySquad",
+    "faction": "WarsawPact",
+    "country": "GDR",
+    "health": 10,
+    "maxHealth": 10,
+    "movementSpeed": 3,
+    "symbol": [
+      "infantry"
+    ],
+    "display": {
+      "char": "G",
+      "color": "#FFFFFF",
+      "bgColor": "rgba(150, 0, 0, 0.8)"
+    },
+    "loadout": [
+      {
+        "weaponId": "1744239094208",
+        "maxCount": 9,
+        "priority": 2,
+        "preferredAmmo": "1744239080487",
+        "ammo": {
+          "1744239080487": 360
+        }
+      }
+    ]
+  },
+  "1744276000006": {
+    "name": "Piechota Zmech.",
+    "unitClass": "InfantrySquad",
+    "faction": "WarsawPact",
+    "country": "Poland",
+    "health": 10,
+    "maxHealth": 10,
+    "movementSpeed": 4,
+    "symbol": [
+      "infantry"
+    ],
+    "display": {
+      "char": "M",
+      "color": "#FFFFFF",
+      "bgColor": "rgba(150, 0, 0, 0.8)"
+    },
+    "loadout": [
+      {
+        "weaponId": "1744239094208",
+        "maxCount": 8,
+        "priority": 2,
+        "preferredAmmo": "1744239080487",
+        "ammo": {
+          "1744239080487": 320
+        }
+      }
+    ]
+  },
+  "2000000010": {
+    "name": "Motostrelki Kom.",
+    "unitClass": "CommandSquad",
+    "faction": "WarsawPact",
+    "country": "USSR",
+    "health": 10,
+    "maxHealth": 10,
+    "movementSpeed": 4,
+    "symbol": ["infantry"],
+    "transport": "1744275000210",
+    "display": {
+      "char": "C",
+      "color": "#FFFFFF",
+      "bgColor": "rgba(150, 0, 0, 0.8)"
+    },
+    "loadout": [
+      {
+        "weaponId": "2000000001",
+        "maxCount": 4,
+        "priority": 1,
+        "preferredAmmo": "2000000001",
+        "ammo": { "2000000001": 120 }
+      }
+    ]
+  },
+  "2000000011": {
+    "name": "12.7mm NSV",
+    "unitClass": "Support",
+    "faction": "WarsawPact",
+    "country": "USSR",
+    "health": 8,
+    "maxHealth": 8,
+    "movementSpeed": 4,
+    "symbol": ["infantry"],
+    "transport": "1744275000210",
+    "display": {
+      "char": "H",
+      "color": "#FFFFFF",
+      "bgColor": "rgba(150, 0, 0, 0.8)"
+    },
+    "loadout": [
+      {
+        "weaponId": "2000000003",
+        "maxCount": 1,
+        "priority": 1,
+        "preferredAmmo": "2000000003",
+        "ammo": { "2000000003": 200 }
+      }
+    ]
+  },
+  "2000000012": {
+    "name": "Pulemetchiki",
+    "unitClass": "InfantrySquad",
+    "faction": "WarsawPact",
+    "country": "USSR",
+    "health": 10,
+    "maxHealth": 10,
+    "movementSpeed": 4,
+    "symbol": ["infantry"],
+    "transport": "1744275000210",
+    "display": {
+      "char": "P",
+      "color": "#FFFFFF",
+      "bgColor": "rgba(150, 0, 0, 0.8)"
+    },
+    "loadout": [
+      {
+        "weaponId": "2000000001",
+        "maxCount": 6,
+        "priority": 2,
+        "preferredAmmo": "2000000001",
+        "ammo": { "2000000001": 180 }
+      },
+      {
+        "weaponId": "2000000002",
+        "maxCount": 3,
+        "priority": 1,
+        "preferredAmmo": "2000000002",
+        "ammo": { "2000000002": 300 }
+      }
+    ]
+  },
+  "2000000013": {
+    "name": "Motostrelki",
+    "unitClass": "InfantrySquad",
+    "faction": "WarsawPact",
+    "country": "USSR",
+    "health": 10,
+    "maxHealth": 10,
+    "movementSpeed": 4,
+    "symbol": ["infantry"],
+    "transport": "1744275000210",
+    "display": {
+      "char": "M",
+      "color": "#FFFFFF",
+      "bgColor": "rgba(150, 0, 0, 0.8)"
+    },
+    "loadout": [
+      {
+        "weaponId": "2000000001",
+        "maxCount": 10,
+        "priority": 1,
+        "preferredAmmo": "2000000001",
+        "ammo": { "2000000001": 300 }
+      }
+    ]
+  }
+}

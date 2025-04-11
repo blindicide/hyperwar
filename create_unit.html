@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Custom Unit</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body { padding: 20px; font-family: sans-serif; }
+        .form-container { max-width: 600px; margin: auto; background: #f4f4f4; padding: 20px; border-radius: 8px; }
+        .form-group { margin-bottom: 15px; }
+        .form-group label { display: block; margin-bottom: 5px; font-weight: bold; }
+        .form-group input[type="text"],
+        .form-group input[type="number"],
+        .form-group select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box; /* Include padding and border in element's total width and height */
+        }
+        .form-group input[type="color"] {
+             padding: 0; /* Color input padding is inconsistent */
+             height: 30px;
+             vertical-align: middle;
+        }
+        fieldset { border: 1px solid #ccc; padding: 15px; margin-bottom: 15px; border-radius: 4px; }
+        legend { font-weight: bold; padding: 0 10px; }
+        button { padding: 10px 15px; background-color: #5cb85c; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 16px; }
+        button:hover { background-color: #4cae4c; }
+        #statusMessage { margin-top: 15px; font-weight: bold; }
+        a { display: inline-block; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Create Custom Unit</h1>
+        <form id="createUnitForm">
+            <fieldset>
+                <legend>Basic Info</legend>
+                <div class="form-group">
+                    <label for="unitName">Name:</label>
+                    <input type="text" id="unitName" name="unitName" required>
+                </div>
+                <div class="form-group">
+                    <label for="unitClass">Class:</label>
+                    <select id="unitClass" name="unitClass" required>
+                        <!-- Options will be populated dynamically -->
+                    </select>
+                </div>
+                <div id="classList" style="margin-bottom: 15px; font-size: 0.95em; color: #333;"></div>
+                <div class="form-group">
+                    <label for="unitFaction">Faction:</label>
+                    <select id="unitFaction" name="unitFaction" required>
+                        <option value="NATO">NATO</option>
+                        <option value="WarsawPact">Warsaw Pact</option>
+                        <option value="Custom">Custom</option>
+                    </select>
+                    <input type="text" id="customFaction" name="customFaction" placeholder="Enter custom faction name" style="display: none; margin-top: 5px;">
+                </div>
+                <div class="form-group" id="countryGroup">
+                    <label for="unitCountry">Country:</label>
+                    <select id="unitCountry" name="unitCountry" required>
+                        <option value="">Select a country</option>
+                    </select>
+                    <input type="text" id="customCountry" name="customCountry" placeholder="Enter custom country name" style="display: none; margin-top: 5px;">
+                </div>
+                <div class="form-group">
+                    <label for="unitHealth">Health (Soldiers):</label>
+                    <input type="number" id="unitHealth" name="unitHealth" min="1" value="10" required>
+                </div>
+                <div class="form-group">
+                    <label for="unitMovement">Movement Speed:</label>
+                    <input type="number" id="unitMovement" name="unitMovement" min="1" value="3" required>
+                </div>
+            </fieldset>
+
+            <details>
+                <summary style="font-size:1.1em;cursor:pointer;"><b>Assign Weapons</b></summary>
+                <fieldset style="margin-top:10px;">
+                    <legend style="display:none;">Assign Weapons</legend>
+                    <div id="weaponAssignmentContainer">
+                        <!-- Weapon assignment UI will be populated here -->
+                        <p>Loading weapons...</p>
+                    </div>
+                </fieldset>
+            </details>
+
+            <fieldset>
+                <legend>Display</legend>
+                 <div class="form-group">
+                    <label for="displayChar">Character:</label>
+                    <input type="text" id="displayChar" name="displayChar" maxlength="1" value="?" required>
+                </div>
+                 <div class="form-group">
+                    <label for="displayColor">Text Color:</label>
+                    <input type="color" id="displayColor" name="displayColor" value="#000000">
+                </div>
+                 <div class="form-group">
+                    <label for="displayBgColor">Background Color (Hex with Alpha, e.g., #RRGGBBAA or rgba()):</label>
+                    <input type="text" id="displayBgColor" name="displayBgColor" placeholder="e.g., rgba(74, 144, 226, 0.2)" value="rgba(200, 200, 200, 0.2)">
+                </div>
+            </fieldset>
+
+            <button type="submit">Create Unit</button>
+            <div id="statusMessage"></div>
+        </form>
+        <a href="index.html">Back to Game</a> |
+        <a href="create_weapon.html">Create Custom Weapon</a>
+
+        <h2>Create Custom Faction</h2>
+        <form id="createFactionForm">
+            <div class="form-group">
+                <label for="factionName">Faction Name:</label>
+                <input type="text" id="factionName" required />
+            </div>
+            <div class="form-group">
+                <label for="factionCountries">Countries (comma-separated):</label>
+                <input type="text" id="factionCountries" placeholder="e.g. USA, UK, France" />
+            </div>
+            <button type="submit">Save Faction</button>
+            <div id="factionStatusMessage"></div>
+        </form>
+
+        <h2>Custom Factions</h2>
+        <div id="factionList" style="margin-top: 15px;"></div>
+
+        <details>
+            <summary style="font-size:1.2em;cursor:pointer;"><b>Custom Units</b></summary>
+            <div id="unitList" style="margin-top: 15px;"></div>
+        </details>
+    </div>
+
+    <script type="module" src="js/create_unit.js"></script>
+</body>
+</html>

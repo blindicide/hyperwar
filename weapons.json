@@ -1,0 +1,44 @@
+{
+  "m16": {
+    "name": "M16 Rifle",
+    "compatibleAmmo": ["5.56mm"],
+    "baseAccuracy": 0.75,
+    "maxDistance": 4,
+    "fireRate": 1
+  },
+  "akm": {
+    "name": "AKM",
+    "compatibleAmmo": ["7.62mm"],
+    "baseAccuracy": 0.70,
+    "maxDistance": 4,
+    "fireRate": 1
+  },
+  "m60": {
+    "name": "M60 MG",
+    "compatibleAmmo": ["7.62mm"],
+    "baseAccuracy": 0.65,
+    "maxDistance": 5,
+    "fireRate": 1
+  },
+  "at4_launcher": {
+    "name": "AT4 Launcher",
+    "compatibleAmmo": ["at4_heat", "at4_he"],
+    "baseAccuracy": 0.80,
+    "maxDistance": 3,
+    "fireRate": 1
+  },
+  "m68_gun": {
+    "name": "105mm M68 Gun",
+    "compatibleAmmo": ["105mm_heat", "105mm_he"],
+    "baseAccuracy": 0.65,
+    "maxDistance": 6,
+    "fireRate": 1
+  },
+  "u5ts_gun": {
+    "name": "115mm U-5TS Gun",
+    "compatibleAmmo": ["115mm_apfsds", "115mm_he"],
+    "baseAccuracy": 0.60,
+    "maxDistance": 5,
+    "fireRate": 1
+  }
+}

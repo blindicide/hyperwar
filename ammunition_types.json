@@ -1,0 +1,45 @@
+{
+  "5.56mm": {
+    "name": "5.56mm Ball",
+    "damage": 2,
+    "type": "AntiInfantry"
+  },
+  "7.62mm": {
+    "name": "7.62mm Ball",
+    "damage": 3,
+    "type": "AntiInfantry"
+  },
+  "at4_heat": {
+    "name": "AT4 HEAT",
+    "damage": 15,
+    "type": "AntiArmor"
+  },
+  "at4_he": {
+    "name": "AT4 HE",
+    "damage": 8,
+    "type": "HighExplosive",
+    "aoeRadius": 0
+  },
+  "105mm_heat": {
+    "name": "105mm HEAT",
+    "damage": 25,
+    "type": "AntiArmor"
+  },
+  "105mm_he": {
+    "name": "105mm HE",
+    "damage": 12,
+    "type": "HighExplosive",
+    "aoeRadius": 1
+  },
+  "115mm_apfsds": {
+    "name": "115mm APFSDS",
+    "damage": 30,
+    "type": "AntiArmor"
+  },
+  "115mm_he": {
+    "name": "115mm HE",
+    "damage": 15,
+    "type": "HighExplosive",
+    "aoeRadius": 1
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "1744238020167": {
+    "name": "10x50mm 10-C/B-M2",
+    "damage": 1,
+    "type": "Bullet",
+    "aoeRadius": 0
+  },
+  "1744238072400": {
+    "name": "81mm 'Roadblock-11' HEAT",
+    "damage": 16,
+    "type": "HEAT",
+    "aoeRadius": 1
+  },
+  "1744239080487": {
+    "name": "5.56mm Ball",
+    "damage": 1,
+    "type": "Bullet",
+    "aoeRadius": 0
+  },
+  "1744274680205": {
+    "name": "100mm HEAT",
+    "damage": 8,
+    "type": "HEAT",
+    "aoeRadius": 0
+  },
+  "1744275000001": {
+    "name": "120mm APFSDS",
+    "damage": 18,
+    "type": "APFSDS",
+    "aoeRadius": 0
+  },
+  "1744275000002": {
+    "name": "120mm HEAT",
+    "damage": 14,
+    "type": "HEAT",
+    "aoeRadius": 0
+  },
+  "1744275000003": {
+    "name": "125mm APFSDS",
+    "damage": 17,
+    "type": "APFSDS",
+    "aoeRadius": 0
+  },
+  "1744275000004": {
+    "name": "125mm HEAT",
+    "damage": 13,
+    "type": "HEAT",
+    "aoeRadius": 0
+  },
+  "1744275000005": {
+    "name": "25mm APDS",
+    "damage": 4,
+    "type": "APFSDS",
+    "aoeRadius": 0
+  },
+  "1744275000006": {
+    "name": "TOW ATGM",
+    "damage": 20,
+    "type": "HEAT",
+    "aoeRadius": 0
+  },
+  "1744275000007": {
+    "name": "30mm APDS",
+    "damage": 3,
+    "type": "APFSDS",
+    "aoeRadius": 0
+  },
+  "1744275000008": {
+    "name": "Konkurs ATGM",
+    "damage": 18,
+    "type": "HEAT",
+    "aoeRadius": 0
+  },
+  "1744275000009": {
+    "name": "155mm HE Shell",
+    "damage": 10,
+    "type": "HE",
+    "aoeRadius": 2
+  },
+  "1744275000010": {
+    "name": "122mm HE Shell",
+    "damage": 8,
+    "type": "HE",
+    "aoeRadius": 2
+  },
+  "1744275000011": {
+    "name": "7.62mm MG",
+    "damage": 1,
+    "type": "Bullet",
+    "aoeRadius": 0
+  },
+  "1744275000012": {
+    "name": ".50cal MG",
+    "damage": 2,
+    "type": "Bullet",
+    "aoeRadius": 0
+  },
+  "1744275000013": {
+    "name": "14.5mm MG",
+    "damage": 3,
+    "type": "Bullet",
+    "aoeRadius": 0
+  },
+  "2000000001": {
+    "name": "5.45mm 7N6",
+    "damage": 1,
+    "type": "Bullet",
+    "aoeRadius": 0
+  },
+  "2000000002": {
+    "name": "7.62mm PKM",
+    "damage": 2,
+    "type": "Bullet",
+    "aoeRadius": 0
+  },
+  "2000000003": {
+    "name": "12.7mm NSV",
+    "damage": 4,
+    "type": "Bullet",
+    "aoeRadius": 0
+  }
+}

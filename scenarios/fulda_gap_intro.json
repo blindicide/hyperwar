@@ -1,0 +1,16 @@
+{
+  "name": "Fulda Gap - Recon",
+  "description": "Initial NATO recon forces encounter Warsaw Pact scouts.",
+  "factions": ["NATO", "WarsawPact"],
+  "map": {
+    "cols": 30,
+    "rows": 20
+  },
+  "units": [
+    { "typeId": "1744238839310", "faction": "NATO", "col": 5, "row": 18 },
+    { "typeId": "1744238839310", "faction": "NATO", "col": 6, "row": 18 },
+    { "typeId": "1744239128224", "faction": "WarsawPact", "col": 25, "row": 2 },
+    { "typeId": "1744239128224", "faction": "WarsawPact", "col": 24, "row": 2 },
+    { "typeId": "1744239128224", "faction": "WarsawPact", "col": 25, "row": 3 }
+  ]
+}

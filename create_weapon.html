@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Create Custom Weapon</title>
+<link rel="stylesheet" href="style.css" />
+<style>
+body { padding: 20px; font-family: sans-serif; }
+.form-container { max-width: 600px; margin: auto; background: #f4f4f4; padding: 20px; border-radius: 8px; }
+.form-group { margin-bottom: 15px; }
+.form-group label { display: block; margin-bottom: 5px; font-weight: bold; }
+.form-group input[type="text"],
+.form-group input[type="number"] {
+    width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;
+}
+button { padding: 10px 15px; background-color: #5cb85c; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 16px; }
+button:hover { background-color: #4cae4c; }
+#statusMessage { margin-top: 15px; font-weight: bold; }
+.weapon-list { margin-top: 20px; }
+.weapon-item { background: #eee; padding: 10px; margin-bottom: 10px; border-radius: 4px; }
+.weapon-item button { margin-left: 10px; }
+a { display: inline-block; margin-top: 20px; }
+</style>
+</head>
+<body>
+<div class="form-container">
+<h1>Create Custom Weapon</h1>
+<form id="createWeaponForm">
+<div class="form-group">
+<label for="weaponName">Weapon Name:</label>
+<input type="text" id="weaponName" required />
+</div>
+<div class="form-group">
+<label for="compatibleAmmo">Compatible Ammo Types (comma-separated IDs):</label>
+<input type="text" id="compatibleAmmo" placeholder="e.g., 5.56mm,7.62mm,at4_heat" required />
+</div>
+<div class="form-group">
+<label for="baseAccuracy">Base Accuracy (0.0 - 1.0):</label>
+<input type="number" id="baseAccuracy" min="0" max="1" step="0.01" value="0.7" required />
+</div>
+<div class="form-group">
+<label for="maxDistance">Max Distance:</label>
+<input type="number" id="maxDistance" min="1" value="4" required />
+</div>
+<div class="form-group">
+<label for="fireRate">Fire Rate:</label>
+<input type="number" id="fireRate" min="1" value="1" required />
+</div>
+<button type="submit">Save Weapon</button>
+<div id="statusMessage"></div>
+</form>
+
+<details open>
+    <summary style="font-size:1.2em;cursor:pointer;"><b>Custom Weapons</b></summary>
+    <div class="weapon-list" id="weaponList"></div>
+</details>
+
+<hr>
+
+<h1>Create Custom Ammo</h1>
+<form id="createAmmoForm">
+<div class="form-group">
+<label for="ammoName">Ammo Name:</label>
+<input type="text" id="ammoName" required />
+</div>
+<div class="form-group">
+<label for="ammoDamage">Damage:</label>
+<input type="number" id="ammoDamage" min="0" value="5" required />
+</div>
+<div class="form-group">
+<label for="ammoType">Type:</label>
+<select id="ammoType" required>
+<option value="AntiInfantry">Anti-Infantry</option>
+<option value="AntiArmor">Anti-Armor</option>
+<option value="HighExplosive">High Explosive</option>
+</select>
+</div>
+<div class="form-group">
+<label for="aoeRadius">AoE Radius (0 for none):</label>
+<input type="number" id="aoeRadius" min="0" value="0" required />
+</div>
+<button type="submit">Save Ammo</button>
+<div id="ammoStatusMessage"></div>
+</form>
+
+<details open>
+    <summary style="font-size:1.2em;cursor:pointer;"><b>Custom Ammo Types</b></summary>
+    <div class="weapon-list" id="ammoList"></div>
+</details>
+
+<a href="index.html">Back to Game</a>
+</div>
+
+<script type="module" src="js/create_weapon.js"></script>
+</body>
+</html>
